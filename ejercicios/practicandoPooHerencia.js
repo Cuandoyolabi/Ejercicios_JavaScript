@@ -1,4 +1,4 @@
-//10 Ejemplos de Herencia, Polimorfismo y Encapsulacion.
+//10 Ejemplos de Herencia, Polimorfismo y Encapsulacion, Abstraccion.
 //Ejemplo 1 
 /*
 class Animal {
@@ -188,4 +188,40 @@ class Boda extends Evento {
 
 const Evento__num1 = new Evento("22/07/2024", "San jose", "Calle 33", "Angela");
 */
+/*
+class Vehiculo {
+    constructor(marca,modelo){
+        this.marca = marca;
+        this.modelo = modelo;
+    }
 
+    arrancar(){
+        console.log(`${this.marca} ${this.modelo} ha arrancado`);
+    }
+
+    detener(){
+        console.log(`${this.marca} ${this.modelo} se ha detenido`);
+    }
+}
+
+class Coche extends Vehiculo{
+    constructor(marca,modelo, puertas){
+        super(marca, modelo);
+        this.puertas = puertas;
+    }
+
+    tocarClaxon(){
+        console.log(`${this.marca} ${this.modelo} esta tocando el claxon`);
+    }
+
+    abrirPuerta(){
+        console.log(`Abriendo las ${this.puertas} puertas de ${this.marca} ${this.modelo}`);
+    }
+}
+
+const miCoche = new Coche("Toyota", "Corola", 4);
+miCoche.arrancar();
+miCoche.tocarClaxon();
+miCoche.abrirPuerta();
+miCoche.detener();
+*/
