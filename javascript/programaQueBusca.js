@@ -4,6 +4,7 @@
 //3-Filter()
 //5-Set
 
+/*
 //Arrays
 let tecnologias = ["Html","Css","Sass","JavaScript","React","Node.js","Vue.js","Angular","Bootstrap"];
 
@@ -29,6 +30,6 @@ const masDeCinco = tecnologias.filter((palabra) => palabra.length > 6);
 console.log(masDeCinco);
 
 //Set
-
-
+const set = new Set();
+*/
 
