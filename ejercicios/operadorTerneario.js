@@ -1,5 +1,5 @@
 //Practicando ando
-/*
+
 let edad = 18;
 let  mensaje = (edad >= 18) ? "Eres mayor de edad" : "Eres menor de edad";
 console.log(mensaje);
@@ -48,4 +48,3 @@ console.log(acceso);
 let usuario = {nombre: "Adam", edad: 22};
 let estado = (usuario.edad) ? "Usuario mayor de edad": "Usuario menor";
 console.log(estado);
-*/
