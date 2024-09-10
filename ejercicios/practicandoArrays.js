@@ -159,7 +159,85 @@ console.log(decimaPieza);
 */
 
 //Practicando Metodos para busqueda y filtrado 80 EJEMPLOS
-let array_n5 = [true,false,"abcdefghi",5,6,5,10, "ABC"];
 
+/*
+let array_n5 = [true,false,"abcdefghi",5,6,5,10, "ABC", "abcdefghi", 5, 5, 10,9,"RED",true, false];
 
+//indexOf() encuentra el primer indice de un elemento que se busca 
+
+let num1 = array_n5.indexOf(5);
+console.log(num1);
+let num2 = array_n5.indexOf(true);
+console.log(num2);
+let num3 = array_n5.indexOf(false);
+console.log(num3);
+let num4 = array_n5.indexOf("abcdefghi");
+console.log(num4);
+let num5 = array_n5.indexOf("ABC");
+console.log(num5);
+let num6 = array_n5.indexOf(10);
+console.log(num6);
+let num7 = array_n5.indexOf(6);
+console.log(num7);
+let num8 = array_n5.indexOf("ABC");
+console.log(num8);
+let num9 = array_n5.indexOf("RED");
+console.log(num9);
+let num10 = array_n5.indexOf(9);
+console.log(num10);
+
+//lastIndexOf() encuentra el ultimo indice de un elemento que se busca, si no esta, te retorna -1
+
+let num11 = array_n5.lastIndexOf(5);
+console.log(num11);
+let num12 = array_n5.lastIndexOf(true);
+console.log(num12);
+let num13 = array_n5.lastIndexOf(false);
+console.log(num13);
+let num14 = array_n5.lastIndexOf("abcdefghi");
+console.log(num14);
+let num15 = array_n5.lastIndexOf("ABC");
+console.log(num15);
+let num16 = array_n5.lastIndexOf(10);
+console.log(num16);
+let num17 = array_n5.lastIndexOf(6);
+console.log(num17);
+let num18 = array_n5.lastIndexOf("ABC");
+console.log(num18);
+let num19 = array_n5.lastIndexOf("RED");
+console.log(num19);
+let num20 = array_n5.lastIndexOf(9);
+console.log(num20);
+*/
+
+let array_n5 = [true,false,"abcdefghi",5,6,5,10, "ABC", "abcdefghi", 5, 5, 10,9,"RED",true, false];
+
+//Includes verifica si esta el elemento que buscas en el array y retorna un booleano
+let = buscandoElCinco = array_n5.includes(5) ? "Jugando a combinar siendo true" : "Jugando a combinar siendo false";
+console.log(buscandoElCinco);
+
+let buscandoLetras = array_n5.includes("ABC") ? "Si existe ABC" : "No existe ABC";
+console.log(buscandoLetras);
+
+let buscandoAlgoFlalso = array_n5.includes(false) ? "Si incluye false" : "No incluye false";
+console.log(buscandoAlgoFlalso);
+
+let buscandoNuimeros = array_n5.includes(10);
+console.log(buscandoNuimeros);
+
+let probandoLetras = array_n5.includes("abcdefghi") ? "Incluye el abecedario" : "No lo incluye";
+console.log(probandoLetras);
+
+//Que pasa cuando la letras son mayusculas y no lo sabes
+let soyUnColor = "Red";
+let buscandoColorRojo = array_n5.includes(soyUnColor) ? "Si esta": "Prueba en mayusculas";
+console.log(buscandoColorRojo);
+
+console.log(buscandoColorRojo);
+
+let buscandoOtraVezElColorRojo = array_n5.lastIndexOf("Red");
+console.log(buscandoOtraVezElColorRojo);
+
+soyUnColor.toUpperCase();
+console.log(soyUnColor);
 

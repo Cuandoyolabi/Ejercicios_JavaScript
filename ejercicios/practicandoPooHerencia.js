@@ -1,6 +1,6 @@
 //10 Ejemplos de Herencia, Polimorfismo y Encapsulacion, Abstraccion.
 //Ejemplo 1 
-/*
+
 class Animal {
     constructor(nombre){
         this.nombre = nombre;
@@ -24,10 +24,10 @@ class Perro extends Animal {
 
 const Solovino = new Perro("Solovino", "desconocido");
 Solovino.hablar();
-*/
+
 
 //Ejemplo 2 
-/*
+
 class Reloj{
     constructor(nombre, modelo){
         this.nombre = nombre;
@@ -66,10 +66,10 @@ miCassio.darLaHora();
 
 darLaHora(miCassio);
 darLaHora(Armani);
-*/
+
 
 //Ejemplo 3 
-/*
+
 class Empleado {
     constructor(nombre, edad, salario, departamento){
         this.nombre = nombre;
@@ -129,12 +129,12 @@ const Julian = new Diseñador("Julian", 25,22000, "Diseñador Frontend","Diseña
 Julian.trabajar();
 Adam.tomarCafe();
 Julian.tomarReunion();
-*/
+
 
 //Ejemplo 4 
 //Probando Encapsulamiento por primera vez.
 //Para poder encapsular necesitas usar # al principio y en el constructor.
-/*
+
 class Persona{
     #nombre;
     #edad;
@@ -153,10 +153,10 @@ const Adam = new Persona("Adam", 22);
 Adam.saludar();
 console.log(Adam.nombre);
 console.log(Adam.edad);
-*/
+
 
 //Ejemplo 5 Gestion de eventos.
-/*
+
 class Evento {
     
     #cliente;
@@ -187,8 +187,8 @@ class Boda extends Evento {
 }
 
 const Evento__num1 = new Evento("22/07/2024", "San jose", "Calle 33", "Angela");
-*/
-/*
+
+
 class Vehiculo {
     constructor(marca,modelo){
         this.marca = marca;
@@ -224,4 +224,3 @@ miCoche.arrancar();
 miCoche.tocarClaxon();
 miCoche.abrirPuerta();
 miCoche.detener();
-*/

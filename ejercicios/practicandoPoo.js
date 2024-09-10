@@ -14,10 +14,10 @@ class Perro {
 
 const solovino = new Perro("Solovino", "Puddle");
 solovino.ladrar();
-*/
+
 
 //Ejemplo 2
-/*
+
 class Carro{
     constructor(año, marca){
         this.año = año;
@@ -36,7 +36,7 @@ class Carro{
 const camioneta = new Carro(2024, "Toyota");
 camioneta.prender();
 camioneta.apagar();
-*/
+
 
 //Ejemplo 3
 /*
@@ -155,10 +155,10 @@ calculadora_num1.sumar(10, 25);
 calculadora_num1.restar(35, 38);
 calculadora_num1.multiplicar(46, 90);
 calculadora_num1.dividir(50, 3);
-*/
+
 
 //Ejemplo 6
-/*
+
 class Cafetera{
     constructor(modelo){
         this.modelo = modelo;
@@ -217,11 +217,11 @@ Modelk1.depositarAgua();
 Modelk1.hacerCafe();
 Modelk1.encender();
 Modelk1.hacerCafe();
-*/
+
 
 //Ejemplo 7 
 //Aqui se necesita hacer una hamburguesa en la que se impriman sus elementos.
-/*
+
 class Cocinero{
     constructor(nombre){
         this.nombre = nombre;
@@ -244,7 +244,7 @@ const Julian = new Cocinero("Julian");
 Julian.hacerHamburguesa();
 Julian.hacerPizza();
 Julian.hacerPapitasFritas();
-*/
+
 
 //Ejemplo 8 
 /*
@@ -273,10 +273,10 @@ class Mesero{
 }
 
 const Jose = new Mesero("Jose", 22);
-*/
+
 
 //Ejemplo 9
-/*
+
 class Alexa{
     constructor(modelo, color){
         this.modelo = modelo;
@@ -340,10 +340,10 @@ Alexa_num1.reproducirMusica("Rock");
 Alexa_num1.conectarCelular();
 Alexa_num1.desconectarCelular();
 Alexa_num1.encender();
-*/
+
 
 //Ejemplo 10
-/*
+
 class Kindle {
     constructor(modelo, año, color){
         this.modelo = modelo;
@@ -383,8 +383,8 @@ class Kindle {
     }
 }
 
-
 const kindleDeAdam = new Kindle("paperWhite", 2002, "Azul");
 kindleDeAdam.comprarLibro("la rama");
 */
+
 
