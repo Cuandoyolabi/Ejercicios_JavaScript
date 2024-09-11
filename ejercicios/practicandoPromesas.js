@@ -132,5 +132,226 @@ nuevaPromesa
         console.log(error);
 })
 */
-    
 
+//Ejemplo 7
+/*
+function primerPaso(){
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            console.log("Primer paso completado");
+            resolve(1);
+        }, 1000);
+    });
+}
+
+function segundoPaso(valor){
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            console.log("Segundo paso completado con valor: ", valor);
+            resolve(valor +  1);
+        }, 1000);
+    });
+}
+
+function tercerPaso(valor){
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            console.log("Tercer paso completado con valor: ", valor);
+            resolve(valor + 1);
+        }, 1000);
+    });
+}
+
+primerPaso()
+    .then(segundoPaso)
+    .then(tercerPaso)
+    .then((resultadoFinal) => {
+        console.log("Proceso completo. Resultado final: ", resultadoFinal);
+    })
+    .catch((error) => {
+        console.log("Ocurrio un error: ", error);
+});
+*/
+
+//Ejemplo 8 
+/*
+function promesaRapida(){
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve("Promesa rapida completada");
+        }, 1000);
+    });
+}
+
+function promesaLenta(){
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve("Promesa lenta completada");
+        }, 1000);
+    });
+}
+
+function promesaQueFalla(){
+    return new Promise((_, reject) =>{
+        setTimeout(() => {
+            reject("Promesa fallida");
+        }, 2000);
+    });
+}
+
+Promise.all([promesaRapida(), promesaLenta(), promesaQueFalla()])
+.then((resultados) => {
+    console.log("Todas las promesas completadas: ", resultados);
+})
+.catch((error) => {
+    console.error("Una de las promesas fallo:", error);
+});
+*/
+
+//Ejemplo 9
+/*
+function autenticarUsuario(usuario, password){
+    return new Promise((resolve, reject) =>{
+        console.log("Autenticando...");
+
+        setTimeout(() => {
+            if(usuario === "admin" && password === "1234"){
+                resolve({usuario: "admin", rol: "Administrador"});
+            } else {
+                reject("Autenticacion fallida: usuario o contraseña incorrectos");
+            }
+        }, 1500);
+    });
+}
+
+autenticarUsuario("admin", "1234")
+    .then((infoUsuario) => {
+        console.log("Bienvenido", infoUsuario);
+    })
+    .catch((error) => {
+        console.log("Error de autenticacion", error);
+});
+*/
+
+//Ejemplo 10
+/*
+function verificarInventario(producto){
+    return new Promise((resolve, reject) => {
+        console.log("Verificando inventario para", producto);
+
+        setTimeout(() => {
+            const disponible = Math.random() > 0.3;
+            if(disponible){
+                resolve("Producto disponble");
+            } else {
+                reject("Producto no disponible");
+            }
+        }, 1000);
+    });
+}
+
+function procesarPago(monto){
+    return new Promise((resolve, reject) =>{
+        console.log("Procesando pago de", monto);
+
+        setTimeout(() => {
+            const exitoPago = Math.random() > 0.2;
+
+            if(exitoPago){
+                resolve("Pago completado");
+            } else {
+                reject("Error al procesar el pago");
+            }
+        }, 2000);
+    });
+}
+
+function confirmarEnvio(){
+    return new Promise((resolve, reject)=> {
+        console.log("Confirmando envio...");
+
+        setTimeout(() => {
+            resolve("Envio confirmado");
+        }, 1500);
+    });
+}
+
+verificarInventario("Laptop")
+    .then((mensajeInventario) => {
+        console.log(mensajeInventario);
+        return procesarPago(1000);
+    })
+    .then((mensajePago) => {
+        console.log(mensajePago);
+        return confirmarEnvio();
+    })
+    .then((mensajeEnvio) => {
+        console.log(mensajeEnvio);
+        console.log("Compra completada con exito");
+    })
+    .catch((error) => {
+        console.error("Error en el proceso de compra: ", error);
+});
+*/
+/*
+function verificarInventario(producto) {
+    return new Promise((resolve, reject) => {
+      console.log("Verificando inventario para", producto);
+  
+      setTimeout(() => {
+        const disponible = Math.random() > 0.3; // 70% de probabilidad de estar disponible
+  
+        if (disponible) {
+          resolve("Producto disponible");
+        } else {
+          reject("Producto no disponible");
+        }
+      }, 1000);
+    });
+  }
+  
+  function procesarPago(monto) {
+    return new Promise((resolve, reject) => {
+      console.log("Procesando pago de", monto);
+  
+      setTimeout(() => {
+        const exitoPago = Math.random() > 0.2; // 80% de probabilidad de éxito
+  
+        if (exitoPago) {
+          resolve("Pago completado");
+        } else {
+          reject("Error al procesar el pago");
+        }
+      }, 2000);
+    });
+  }
+  
+  function confirmarEnvio() {
+    return new Promise((resolve) => {
+      console.log("Confirmando envío...");
+  
+      setTimeout(() => {
+        resolve("Envío confirmado");
+      }, 1500);
+    });
+  }
+  
+  // Simulación del proceso de compra
+  verificarInventario("Laptop")
+    .then((mensajeInventario) => {
+      console.log(mensajeInventario);
+      return procesarPago(1000);
+    })
+    .then((mensajePago) => {
+      console.log(mensajePago);
+      return confirmarEnvio();
+    })
+    .then((mensajeEnvio) => {
+      console.log(mensajeEnvio);
+      console.log("Compra completada con éxito");
+    })
+    .catch((error) => {
+      console.error("Error en el proceso de compra:", error);
+    });
+*/
+       
