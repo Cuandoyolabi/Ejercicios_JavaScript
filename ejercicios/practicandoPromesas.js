@@ -9,7 +9,7 @@ const promesaSimple = new Promise((resolve, reject) => {
 promesaSimple.then(result => {
     console.log(result);
 })
-*/
+/*
 //En JavaScript, resolve y reject son funciones que se utilizan 
 //dentro de las promesas para manejar el resultado de una operación asincrónica.
 /*
@@ -80,6 +80,7 @@ firstPromise
          console.log(result);
 });
 */
+//Ejemplo 5
 /*
 const promise1 = new Promise(resolve => setTimeout(() => resolve("Promesa 1 resuelta"), 1000));
 const promise2 = new Promise(resolve => setTimeout(() => resolve("Promesa 1 resuelta"), 2000));
@@ -89,4 +90,47 @@ Promise.all([promise1, promise2, promise3]).then(results => {
     console.log(results);
 });
 */
+/*
+//Ejemplo 6
+function solicitarDatosApi() {
+    return new Promise((resolve, reject) => {
+        console.log("Solicitando datos...");
+    
+        setTimeout(() => {
+            const exito = Math.random() > 0.5;
+        
+            if(exito){
+                resolve({data: "Datos recibidos"});
+            } else {
+                reject("Error en la solicitud de datos");
+            }
+        }, 2000);
+    });
+}
+
+solicitarDatosApi()
+    .then((resultado) => {
+        console.log("Resultado: ", resultado);
+    })
+    .catch((error) => {
+        console.log("Error", error);
+});
+*/
+/*
+const nuevaPromesa = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve("Jugando con promesas");
+        reject("Jugando a errores");
+    }, 1000)
+});
+
+nuevaPromesa
+    .then((result) => {
+        console.log(result);
+    })
+    .catch((error) => {
+        console.log(error);
+})
+*/
+    
 
