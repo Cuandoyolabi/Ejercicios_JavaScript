@@ -107,59 +107,86 @@ Simula el error usando un número aleatorio y detén el flujo si ocurre un error
 */
 
 //Simulacion de error
-function simulandoError(){
+function simulandoError(callback){
     let randomNumber = Math.floor(Math.random() * 10) + 1;
-        let randomError = (randomNumber == 1 || randomNumber == 2) ? true : false;
+    let randomError = (randomNumber == 1 || randomNumber == 2) ? true : false;
+    if(randomError == true){
+        callback("Error: Algo salio mal.");
+    } else {
+        callback(null);
+    }
 }
 
 //Recibiendo materiales
 function receiveMaterials(callback){
 
-   let materialesRecibidos = "Materiales";
+    console.log("Recibiendo materia prima");
     setTimeout( () =>{
-        console.log("Materia prima recibida");
-        processMaterials(materialesRecibidos, handleError);
+        simulandoError((error) => {
+            if(error) {
+                callback(error);
+            } else {
+                console.log("Materia prima recibida");
+                callback(null, "Materia prima");
+            }
+        });
     }, 1000)
 }
 
 //Procesando materiales
 function processMaterials(materials, callback){
 
-    let materialProcesado = materials;
+    console.log("Procesando " + materials + "....");
     setTimeout( () =>{
-        console.log("Materia procesada");
-        packageProduct(materialProcesado, handleError);
+        simulandoError((error) => {
+            if(error) {
+                callback(error);
+            } else {
+                console.log("Materia procesada.");
+                callback(null, "Proucto procesado");
+            }
+        });
     }, 2000)
 }
 
+//Empaquetando el producto
 function packageProduct(product, callback){
 
-   
-
-    let productoEmpaquetado = product;
+    console.log("Empaquetado" + product + "...");
     setTimeout( () =>{
-        console.log("Producto empaquetado");
-        shipProduct(productoEmpaquetado, handleError);
+        simulandoError((error) => {
+            if(error) {
+                callback(error);
+            } else {
+                console.log("Producto empaquetado");
+                callback(null, "Proucto empaquetado");
+            }
+        });
     }, 1000)
 }
 
+//Enviando el producto
 function shipProduct(package, callback){
 
-    let productoEnviado = package;
+    console.log("Enviando" + package + "...");
     setTimeout( () =>{
-        console.log("Producto enviado con exito");
+        simulandoError((error) => {
+            if(error) {
+                callback(error);
+            } else {
+                console.log("Producto enviado con exito");
+                callback(null);
+            }
+        });
     }, 2000)
 }
 
+//Manejando el error
 function handleError(error){
-    if(error){
-        console.log("AA");
-        return  true;
-    } else {
-        return;
-    }
+    console.log(error)
 }   
 
+//Funcion que empieza el estado de trabajo
 function empezarTrabajo(){
     receiveMaterials((error, materials) => {
         if(error) return handleError(error);
@@ -178,6 +205,7 @@ function empezarTrabajo(){
     });
 };
 
+empezarTrabajo();
 
 
 
