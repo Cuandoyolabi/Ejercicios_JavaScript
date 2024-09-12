@@ -407,10 +407,164 @@ const numeros = [10, 45, 78, 23, 67, 89, 32];
 const index = numeros.findIndex(num => num > 10);
 console.log(index);
 */
+//Ejemplo 2
+/*
+const names = ["Juan", "Pedro", "Ana", "Luis"];
+const index = names.findIndex(name => name === "Ana");
+console.log(index);
+*/
+/*
+const users = [
+    {name: "Juan", age: 20},
+    {name: "Ana", age: 30},
+    {name: "Luis", age: 25}
+]
 
+const index = users.findIndex(user => user.name === "Ana");
+console.log(index);
+*/
+/*
+const words = ["banana", "apple", "pear", "mango"];
+const index = words.findIndex(word => word.startsWith("a"));
+console.log(index);
+*/
+/*
+const words = ["banana", "apple", "pear", "mango"];
+const string = words.toString();
+console.log(string);
+*/
+/*
+const numbers = [4, 6, 8, 9, 10];
+const index = numbers.findIndex(num => num % 2 !== 0);
+console.log(index);
+*/
+/*
+const inventory = [
+    {item: "apple", quantity: 10},
+    {item: "banana", quantity: 0},
+    {item: "orange", quantity: 5}
+]
 
+const index = inventory.findIndex(product => product.quantity === 0);
+console.log(index);
+const element = inventory.find(product => product.quantity === 0);
+console.log(element.item);
+*/
+/*
+const frutas = ["kiwi", "apple", "banana", "grape"];
+const index = frutas.findIndex(fruta => fruta.includes("k"));
+console.log(index);
+*/
+/*
+const numbers = [14, 18, 21, 24, 30];
+const index = numbers.findIndex(num => num > 15 && num % 2 === 0);
+console.log(index);
+*/
 
+//--------------------------------------------------------------------------
+//Find() retorna el primer elemento que cumpla una funcion
+//FindIndex() retorna el primer indice que cumpla una funcion
 
+//Filter()
+//Crea un nuevo array con los elementos que cumplan una funcion especifica
+/*
+const numbers = [4, 11, 2, 15, 7, 20];
+const greaterThanTen = numbers.filter(num => num > 10);
+console.log(greaterThanTen);
+*/
+/*
+const people = [
+    {name: "John", age: 25},
+    {name: "Jane", age: 30},
+    {name: "Jim", age: 22},
+    {name: "Julian", age: 15}
+]
+
+const adult = people.filter(person => person.age >= 18);
+const minor = people.filter(person => person.age < 18);
+console.log(minor);
+console.log(adult);
+*/
+/*
+const words = ["apple", "banana", "cherry", "sandia"];
+const wordsWithA = words.filter(word => word.includes("c"));
+console.log(wordsWithA);
+*/
+/*
+const numbers = [1, 2, 2, 3, 4, 4, 5];
+const uniqueNumbers = numbers.filter((num, index, arr) => arr.indexOf(num) === index);
+console.log(uniqueNumbers);
+*/
+
+/*
+some() verifica si al menos un elemento en el array cumple con la condición proporcionada.
+Retorna true si al menos un elemento cumple la condición, de lo contrario, retorna false.
+*/
+
+/*
+//Ejemplo 1
+const numeros = [4, 11, 2, 15, 7, 20];
+const hasNumberGreaterThanTen = numeros.some(num => num > 10);
+console.log(hasNumberGreaterThanTen);
+
+//Ejemplo 2
+const people = [
+    {name: "John", age: 25},
+    {name: "Adam", age: 30},
+    {name: "Jim", age: 24}
+]
+
+const personaMayorA40 = people.some(person => person.age > 30);
+console.log(personaMayorA40);
+const personaMenor30 = people.some(person => person.age < 30);
+console.log(personaMenor30);
+*/
+/*
+//Ejemplo 3
+const numbers = [1, 3, 5, 7, 8];
+const hasEvenNumber = numbers.some(num => num % 2 === 0);
+console.log(hasEvenNumber);
+*/
+
+/*
+every() verifica si todos los elementos en el array cumplen con la condición proporcionada. 
+Retorna true si todos los elementos cumplen la condición, de lo contrario, retorna false.
+*/
+/*
+const products = [
+    {name: "Producto A", price: 20},
+    {name: "Producto B", price: 50},
+    {name: "Producto C", price: 75}
+]
+
+const allProductsInRange = products.every(product => product.price >= 10 && product.price < 100);
+console.log(allProductsInRange);
+*/
+/*
+const events = [
+    {name: "Event 1", date: new Date("2024-01-15") },
+    {name: "Event 2", date: new Date("2024-06-25") },
+    {name: "Event 3", date: new Date("2024-12-31") }
+];
+
+const allEvents = events.every(event => event.date.getFullYear() === 2024);
+console.log(allEvents);
+*/
+
+/*
+find()
+findIndex()
+filter()
+some()
+every()
+*/
+
+//Map
+// Crea un array con todos los elementos y si quieres, les das una funcion que haga que cambien
+//Digamos que quieres convertir un array de numeros multiplicados x2
+const numeros = [1, 2, 3, "Hola",4, 5];
+const numerosMultiplicados = numeros.map(num => num * 2);
+console.log(numerosMultiplicados);
 
 
 
