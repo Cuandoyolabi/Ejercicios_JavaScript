@@ -209,7 +209,7 @@ console.log(num19);
 let num20 = array_n5.lastIndexOf(9);
 console.log(num20);
 */
-
+/*
 let array_n5 = [true,false,"abcdefghi",5,6,5,10, "ABC", "abcdefghi", 5, 5, 10,9,"RED",true, false];
 
 //Includes verifica si esta el elemento que buscas en el array y retorna un booleano
@@ -240,4 +240,177 @@ console.log(buscandoOtraVezElColorRojo);
 
 soyUnColor.toUpperCase();
 console.log(soyUnColor);
+*/
+
+/*
+---------------------------------------------------------
+    Recapitulando, estuve estudiando:
+    push(): Agrega al final
+    pop(): Elimina al final
+    unshift(): Agregar al principio
+    shift(): Elimina al principio
+    splice(): Agrega, elimina y remplaza.
+    slice(): Retorna un array nuevo sin modificar el original
+    indexOf(): Regresa indice del elemento buscado
+    LastIndexOf(): Regresa indice del ultimo elemento buscado
+    includes(): Regresa booleano si el elemento existe
+---------------------------------------------------------------
+*/
+
+//Practicando el metodo find()
+
+/*
+El método find() en JavaScript se utiliza para buscar el primer elemento 
+en un array que cumpla con una condición proporcionada por una función. 
+Si lo encuentra, devuelve ese elemento; si no, devuelve undefined.
+*/
+
+/*
+//Ejemplo 1
+const numeros = [10, 20, 30, 40, 50];
+const encontrado = numeros.find(elemento => elemento > 25);
+console.log(encontrado);
+
+//Ejemplo 2
+const usuarios = [
+    {nombre: "Carlos", edad: 22},
+    {nombre: "Lucia", edad: 19},
+    {nombre: "Ana", edad: 25}
+];
+
+const usuarioMayor = usuarios.find(user => user.edad > 20);
+console.log(usuarioMayor);
+*/
+
+//Ejemplo 3
+/*
+const frutas = ["manzana", "pera", "platano", "uva"];
+
+const frutaEncontrado = frutas.find(fruta => fruta.startsWith("p"));
+console.log(frutaEncontrado);
+*/
+
+//Ejemplo 4
+/*
+const numeros = [2, 4, 6, 8, 10];
+
+const primerImpar = numeros.find(num => num % 2 !== 0);
+console.log(primerImpar);
+*/
+
+//Ejemplo 5
+/*
+const productos = [
+    {id: 1, nombre: "Laptop", precio: 800},
+    {id: 2, nombre: "Telefono", precio: 500},
+    {id: 3, nombre: "Tablet", precio: 300}
+];
+
+const productoBarato = productos.find(producto => producto.precio < 600);
+console.log(productoBarato);
+*/
+
+//Ejemplo 6 ARRAY MULTIDIMENSIONAL
+/*
+const matriz = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+];
+
+const valorEncontrado = matriz.find(subArray => subArray.includes(6));
+console.log(valorEncontrado);
+*/
+
+//Ejemplo 7 Objeto anidado en un array
+/*
+const libros = [
+    {titulo: "Libro A", autor: {nombre: "Autor A", edad: 45} },
+    {titulo: "Libro B", autor: {nombre: "Autor B", edad: 30} },
+    {titulo: "Libro C", autor: {nombre: "Autor C", edad: 60} },
+];
+
+const libroConAutorMayor = libros.find(libro => libro.autor.edad > 50);
+console.log(libroConAutorMayor);
+*/
+
+//Ejemplo 8
+/*
+const empleados = [
+
+    {nombre: "Juan", activo: true, salario: 2500},
+    {nombre: "Maria", activo: false, salario: 3000},
+    {nombre: "Pedro", activo: true, salario: 4000},
+    {nombre: "Ana", activo: true, salario: 1500}
+
+];
+
+const empleadoElegido = empleados.find(empleado => 
+    empleado.activo && empleado.salario > 2000);
+
+console.log(empleadoElegido);
+*/
+/*
+//Ejercicio 1 
+const numeros = [10, 45, 78, 23, 67, 89, 32];
+
+// Tu tarea: Usar find() para encontrar el primer número mayor que 50
+const numeroMayorQue50 = numeros.find(numero => numero > 50);
+
+console.log(numeroMayorQue50); // Debería imprimir 78
+
+//Ejercicio 2
+const productos = [
+    { nombre: "Teclado", precio: 120 },
+    { nombre: "Mouse", precio: 85 },
+    { nombre: "Monitor", precio: 150 },
+    { nombre: "USB", precio: 25 }
+];
+  
+  // Tu tarea: Usar find() para encontrar el primer producto con precio menor que 100
+const productoBarato = productos.find(producto => producto.precio < 100);
+  
+console.log(productoBarato); // Debería imprimir { nombre: "Mouse", precio: 85 }
+*/
+//Cuando buscas en objetos, se usa un punto.
+
+//Ejercicio 3
+/*
+const estudiantes = [
+    { nombre: "Juan", cursos: [ { curso: "Matemáticas", calificacion: 85 }, { curso: "Historia", calificacion: 90 } ] },
+    { nombre: "Lucía", cursos: [ { curso: "Matemáticas", calificacion: 92 }, { curso: "Historia", calificacion: 88 } ] },
+    { nombre: "Pedro", cursos: [ { curso: "Matemáticas", calificacion: 91 }, { curso: "Historia", calificacion: 85 } ] },
+    { nombre: "Ana", cursos: [ { curso: "Matemáticas", calificacion: 89 }, { curso: "Historia", calificacion: 92 } ] }
+];
+
+const cursoBuscado = "Matematicas";
+
+const mejorEstudiante = estudiantes.reduce((mejor, estudiante) => {
+    const curso = estudiante.cursos.find(c => c.curso === cursoBuscado);
+    if(curso && (!mejor || curso.calificacion > mejor.calificacion)){
+        return {nombre: estudiante.nombre, calificacion: curso.calificacion};
+    }
+    return mejor;
+}, null);
+
+console.log(`El estudiante con la mejor calificacion en ${cursoBuscado} es ${mejorEstudiante.nombre} con una calificaicon de ${mejorEstudiante.calificacion}`);
+*/
+
+/*
+El método findIndex() devuelve el índice del primer elemento en un array que 
+cumpla con una condición proporcionada por una función (callback). 
+Si no se encuentra ningún elemento que cumpla con la condición, devuelve -1.
+*/
+/*
+const numeros = [10, 45, 78, 23, 67, 89, 32];
+
+const index = numeros.findIndex(num => num > 10);
+console.log(index);
+*/
+
+
+
+
+
+
 
