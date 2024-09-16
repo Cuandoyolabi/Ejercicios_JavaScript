@@ -354,4 +354,24 @@ function verificarInventario(producto) {
       console.error("Error en el proceso de compra:", error);
     });
 */
-       
+
+function descargarArchivo(){
+
+    return promesa = new Promise((resolve, reject) => {
+    console.log("Iniciando descarga...");
+
+        setTimeout(() => {
+            const exito = true;
+            if(exito){
+                resolve("El archivo se esta descargando :)");
+            } else {
+                reject("El archivo no se pudo descargar :(");
+            }
+        }, 3000);
+    });
+}
+
+descargarArchivo()
+    .then((mensaje) => console.log(mensaje))
+    .catch((error) => console.log(error));
+
