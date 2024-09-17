@@ -354,16 +354,16 @@ function verificarInventario(producto) {
       console.error("Error en el proceso de compra:", error);
     });
 */
-
+/*   PROBLEMA SENCILLO NUMERO 1
 function descargarArchivo(){
 
     return promesa = new Promise((resolve, reject) => {
     console.log("Iniciando descarga...");
 
         setTimeout(() => {
-            const exito = true;
+            const exito = false;
             if(exito){
-                resolve("El archivo se esta descargando :)");
+                resolve("El archivo se descargo por completo :)");
             } else {
                 reject("El archivo no se pudo descargar :(");
             }
@@ -374,4 +374,31 @@ function descargarArchivo(){
 descargarArchivo()
     .then((mensaje) => console.log(mensaje))
     .catch((error) => console.log(error));
+*/
+/*
+function procesarDatos() {
+  return resultado = new Promise((resolve) => {
+    resolve("datos procesados...");
+  }, 1000);
+}
+
+procesarDatos().then((data) => console.log(data)); // Error
+*/
+/*
+function procesarPedido(idPedido, tiempo){
+    return promise = new Promise((resolve, reject) => {
+        
+        setTimeout(() => {
+            if(tiempo < 4000){
+                resolve(`Pedido ${idPedido} completado en [${tiempo} segundos`);
+            } else {
+                reject(`Pedido ${idPedido} fallido por exceder el tiempo de espera`)
+            }
+        }, tiempo * 1000);
+    });
+}
+*/
+
+
+
 

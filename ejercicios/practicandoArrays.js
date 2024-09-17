@@ -562,9 +562,38 @@ every()
 //Map
 // Crea un array con todos los elementos y si quieres, les das una funcion que haga que cambien
 //Digamos que quieres convertir un array de numeros multiplicados x2
+/*
 const numeros = [1, 2, 3, "Hola",4, 5];
 const numerosMultiplicados = numeros.map(num => num * 2);
 console.log(numerosMultiplicados);
+*/
+
+/*
+---------------------------------------------------------
+    Recapitulando, estuve estudiando:
+    push(): Agrega al final
+    pop(): Elimina al final
+    unshift(): Agregar al principio
+    shift(): Elimina al principio
+    splice(): Agrega, elimina y remplaza.
+    slice(): Retorna un array nuevo sin modificar el original
+    indexOf(): Regresa indice del elemento buscado
+    LastIndexOf(): Regresa indice del ultimo elemento buscado
+    includes(): Regresa booleano si el elemento existe
+---------------------------------------------------------------
+*/
+
+/*
+-----------------------------------------------------------------
+find(): Retorna el primer elemento que cumpla una funcion
+findIndex(): Retorna el primer indice del elemento que cumpla una funcion
+filter(): Crea un nuevo array con los elementos que cumplan con la funcion especifica
+some(): Retorna booleano si minimo un elemento cumple con la funcion
+every(): Retornar booleano si todos cumplen con la funcion
+------------------------------------------------------------------
+*/
+
+
 
 
 

@@ -123,7 +123,7 @@ class Diseñador extends Empleado {
     }
 }
 
-const Adam = new Programador("Adam", 22, 35000, "Frontend Dev", "Codificar");
+const Adam2= new Programador("Adam", 22, 35000, "Frontend Dev", "Codificar");
 Adam.trabajar();
 const Julian = new Diseñador("Julian", 25,22000, "Diseñador Frontend","Diseñar");
 Julian.trabajar();
