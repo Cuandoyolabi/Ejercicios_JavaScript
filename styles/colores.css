@@ -1,0 +1,58 @@
+/* Primer Cubo */
+
+.simple__encierro{
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.cubo{
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+}
+
+/*  Segundo cubo  */
+.simple__encierro__num2{
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.cubo__num2{
+    width: 100px;
+    height: 100px;
+    border: 1px solid rgb(0, 0, 0);
+    background-color: rgb(0, 0, 0);
+}
+
+.cubo__num2__negro{
+    background-color: white;
+}
+
+
+/*  Tercer cubo */
+.simple__encierro__num3{
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.cubo__num3{
+    width: 100px;
+    height: 100px;
+    border: 1px solid rgb(0, 0, 0);
+    background-color: rgb(0, 0, 0);
+}
