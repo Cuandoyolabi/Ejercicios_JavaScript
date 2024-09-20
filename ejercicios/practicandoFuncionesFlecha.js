@@ -23,5 +23,3 @@ const contarCaracteres = (texto) => {
 console.log(contarCaracteres('JavaScript'));
 */
 
-
-

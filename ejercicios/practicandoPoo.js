@@ -387,4 +387,4 @@ const kindleDeAdam = new Kindle("paperWhite", 2002, "Azul");
 kindleDeAdam.comprarLibro("la rama");
 */
 
-
+// Practicando POO normal 100 ejemplos.
